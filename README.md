@@ -4,6 +4,6 @@ Web panel site for Admin, Rider and Driver
 
 ## Keywords
 
-Website, Laravel, Php, MySQL
+Website, Laravel, Vue.JS, MySQL
 
 https://www.trycooper.com
