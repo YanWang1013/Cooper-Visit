@@ -1,0 +1,80 @@
+Searching 679 files for "logo-black.png"
+
+/Users/gilcassar/cooper-web/database/seeds/SettingsTableSeeder.php:
+   21              [
+   22                  'key' => 'site_logo',
+   23:                 'value' => asset('logo-black.png'),
+   24              ],
+   25              [
+
+/Users/gilcassar/cooper-web/resources/views/account/include/header.blade.php:
+    5  		<div class="navbar-left">
+    6  			<a class="navbar-brand" href="{{url('account/dashboard')}}">
+    7: 				<div class="logo" style="background: url({{ Setting::get('site_logo', asset('logo-black.png')) }}) no-repeat;"></div>
+    8  			</a>
+    9  			<div class="toggle-button dark sidebar-toggle-first float-xs-left hidden-md-up">
+
+/Users/gilcassar/cooper-web/resources/views/admin/include/header.blade.php:
+    5  		<div class="navbar-left">
+    6  			<a class="navbar-brand" href="{{url('admin/dashboard')}}">
+    7: 				<div class="logo" style="background: url({{ Setting::get('site_logo', asset('logo-black.png')) }}) no-repeat;"></div>
+    8  			</a>
+    9  			<div class="toggle-button dark sidebar-toggle-first float-xs-left hidden-md-up">
+
+/Users/gilcassar/cooper-web/resources/views/admin/settings/application.blade.php:
+   24  					<div class="col-xs-10">
+   25  						@if(Setting::get('site_logo')!='')
+   26: 	                    <img style="height: 90px; margin-bottom: 15px;" src="{{ Setting::get('site_logo', asset('logo-black.png')) }}">
+   27  	                    @endif
+   28  						<input type="file" accept="image/*" name="site_logo" class="dropify form-control-file" id="site_logo" aria-describedby="fileHelp">
+
+/Users/gilcassar/cooper-web/resources/views/dispatcher/include/header.blade.php:
+    5  		<div class="navbar-left">
+    6  			<a class="navbar-brand" href="{{url('admin/dashboard')}}">
+    7: 				<div class="logo" style="background: url({{ Setting::get('site_logo', asset('logo-black.png')) }}) no-repeat;"></div>
+    8  			</a>
+    9  			<div class="toggle-button dark sidebar-toggle-first float-xs-left hidden-md-up">
+
+/Users/gilcassar/cooper-web/resources/views/fleet/include/header.blade.php:
+    5  		<div class="navbar-left">
+    6  			<a class="navbar-brand" href="{{url('fleet/dashboard')}}">
+    7: 				<div class="logo" style="background: url({{ Setting::get('site_logo', asset('logo-black.png')) }}) no-repeat;"></div>
+    8  			</a>
+    9  			<div class="toggle-button dark sidebar-toggle-first float-xs-left hidden-md-up">
+
+/Users/gilcassar/cooper-web/resources/views/provider/layout/auth.blade.php:
+   32                  <div class="row no-margin">
+   33                      <div class="col-md-6 log-left">
+   34:                         <span class="login-logo"><img src="{{ Setting::get('site_logo', asset('logo-black.png')) }}"></span>
+   35                          <h2>{{Setting::get('site_title','Tranxit')}} needs partners like you.</h2>
+   36                          <p>Drive with {{Setting::get('site_title','Tranxit')}} and earn great money as an independent contractor. Get paid weekly just for helping our community of riders get rides around town. Be your own boss and get paid in fares for driving on your own schedule.</p>
+
+/Users/gilcassar/cooper-web/resources/views/provider/layout/partials/header.blade.php:
+   14                      <span class="hamb-bottom"></span>
+   15                  </button>
+   16:                 <a class="navbar-brand" href="{{ url('/provider') }}"><img src="{{ Setting::get('site_logo', asset('logo-black.png')) }}"></a>
+   17              </div>
+   18  
+
+/Users/gilcassar/cooper-web/resources/views/user/auth/login.blade.php:
+    8          <div class="row no-margin">
+    9              <div class="col-md-6 log-left">
+   10:                 <span class="login-logo"><img src="{{ Setting::get('site_logo', asset('logo-black.png'))}}"></span>
+   11                  <h2>Get your own CoOper account and get picked up in minutes!</h2>
+   12                  <p>Welcome to {{Setting::get('site_title', 'CoOper App Ltd.')}}, the easiest way to get around at the tap of a button.</p>
+
+/Users/gilcassar/cooper-web/resources/views/user/auth/register.blade.php:
+    9          <div class="row no-margin">
+   10              <div class="col-md-6 log-left">
+   11:                 <span class="login-logo"><img src="{{ Setting::get('site_logo', asset('logo-black.png'))}}"></span>
+   12                  <h2>Create your account and get moving in minutes</h2>
+   13                  <p>Welcome to {{Setting::get('site_title','CoOper App Ltd')}}, the easiest way to get around at the tap of a button.</p>
+
+/Users/gilcassar/cooper-web/resources/views/user/layout/app.blade.php:
+   72                              </button>
+   73  
+   74:                             <a class="navbar-brand" href="{{url('/')}}"><img src="{{ Setting::get('site_logo', asset('logo-black.png')) }}"></a>
+   75                          </div>
+   76                          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+11 matches across 11 files

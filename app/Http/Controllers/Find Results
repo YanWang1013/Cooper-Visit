@@ -1,0 +1,143 @@
+Searching 682 files for "USER CANCELLED COUNT"
+
+/Users/gilcassar/cooper-web/resources/lang/en/admin.php:
+  289  	'service' => 'No. of Service Types',
+  290  	'rides' => 'Total Cancelled Rides',
+  291: 	'cancel_count' => 'User Cancelled Count',
+  292  	'provider_cancel_count' => 'Provider Cancelled Count',
+  293  	'fleets' => 'No. of Fleets',
+
+/Users/gilcassar/cooper-web/resources/views/account/dashboard.blade.php:
+   56  				<div class="t-icon right"><span class="bg-primary"></span><i class="ti-view-grid"></i></div>
+   57  				<div class="t-content">
+   58: 					<h6 class="text-uppercase mb-1">User Cancelled Count</h6>
+   59  					<h1 class="mb-1">{{$user_cancelled}}</h1>
+   60  				</div>
+
+2 matches across 2 files
+
+
+Searching 682 files for "ti-target"
+
+/Users/gilcassar/cooper-web/public/main/vendor/themify-icons/themify-icons.css:
+   45  	content: "\e606";
+   46  }
+   47: .ti-target:before {
+   48  	content: "\e607";
+   49  }
+
+/Users/gilcassar/cooper-web/resources/views/account/include/nav.blade.php:
+   12  			<li>
+   13  				<a href="{{ route('account.ride.statement') }}" class="waves-effect waves-light">
+   14: 					<span class="s-icon"><i class="ti-target"></i></span>
+   15  					<span class="s-text">Overall Ride Statments</span>
+   16  				</a>
+   ..
+   18  			<li>
+   19  				<a href="{{ route('account.ride.statement.provider') }}" class="waves-effect waves-light">
+   20: 					<span class="s-icon"><i class="ti-target"></i></span>
+   21  					<span class="s-text">Driver Statement</span>
+   22  				</a>
+   ..
+   24  			<li>
+   25  				<a href="{{ route('account.ride.statement.today') }}" class="waves-effect waves-light">
+   26: 					<span class="s-icon"><i class="ti-target"></i></span>
+   27  					<span class="s-text">Daily Statement</span>
+   28  				</a>
+   ..
+   30  			<li>
+   31  				<a href="{{ route('account.ride.statement.monthly') }}" class="waves-effect waves-light">
+   32: 					<span class="s-icon"><i class="ti-target"></i></span>
+   33  					<span class="s-text">Monthly Statement</span>
+   34  				</a>
+   ..
+   36  			<li>
+   37  				<a href="{{ route('account.ride.statement.yearly') }}" class="waves-effect waves-light">
+   38: 					<span class="s-icon"><i class="ti-target"></i></span>
+   39  					<span class="s-text">Yearly Statement</span>
+   40  				</a>
+
+/Users/gilcassar/cooper-web/resources/views/admin/include/nav.blade.php:
+   11  			<li>
+   12  				<a href="{{ route('admin.dispatcher.index') }}" class="waves-effect waves-light">
+   13: 					<span class="s-icon"><i class="ti-target"></i></span>
+   14  					<span class="s-text">@lang('admin.include.dispatcher_panel')</span>
+   15  				</a>
+
+/Users/gilcassar/cooper-web/resources/views/dispatcher/include/nav.blade.php:
+    5  			<li>
+    6  				<a href="{{ route('dispatcher.index') }}" class="waves-effect waves-light">
+    7: 					<span class="s-icon"><i class="ti-target"></i></span>
+    8  					<span class="s-text">Dispatcher Panel</span>
+    9  				</a>
+
+8 matches across 4 files
+
+
+Searching 682 files for "Heat Map"
+
+/Users/gilcassar/cooper-web/app/Http/Controllers/AdminController.php:
+   75  
+   76      /**
+   77:      * Heat Map.
+   78       *
+   79       * @param  \App\Provider  $provider
+
+/Users/gilcassar/cooper-web/resources/lang/en/admin.php:
+   88  		'dashboard' => 'Dashboard',
+   89  		'dispatcher_panel' => 'Dispatcher Panel',
+   90: 		'heat_map' => 'Heat Map',
+   91  		'members' => 'Members',
+   92  		'users' => 'Users',
+
+2 matches across 2 files
+
+
+Searching 682 files for "Riders Heatmap"
+
+0 matches
+
+Searching 682 files for "Heatmap"
+
+/Users/gilcassar/cooper-web/app/Http/Controllers/AdminController.php:
+   80       * @return \Illuminate\Http\Response
+   81       */
+   82:     public function heatmap()
+   83      {
+   84          try{
+   85              $rides = UserRequests::has('user')->orderBy('id','desc')->get();
+   86              $providers = Provider::take(10)->orderBy('rating','desc')->get();
+   87:             return view('admin.heatmap',compact('providers','rides'));
+   88          }
+   89          catch(Exception $e){
+
+/Users/gilcassar/cooper-web/resources/lang/en/admin.php:
+  297  	'No_Details_Found' => 'No Details Found',
+  298  	],
+  299: 	'heatmap' => [
+  300: 		'Ride_Heatmap' => 'Online Drivers Map',
+  301  	],
+  302  	'push' => [
+
+/Users/gilcassar/cooper-web/resources/views/admin/heatmap.blade.php:
+   14  		<div class="box box-block bg-white">
+   15  				<div class="clearfix mb-1">
+   16: 					<h5 class="float-xs-left">@lang('admin.heatmap.Ride_Heatmap')</h5>
+   17  					<div class="float-xs-right">
+   18  					</div>
+
+/Users/gilcassar/cooper-web/resources/views/admin/include/nav.blade.php:
+   17  			
+   18  			<li>
+   19: 				<a href="{{ route('admin.heatmap') }}" class="waves-effect waves-light">
+   20  					<span class="s-icon"><i class="ti-map"></i></span>
+   21  					<span class="s-text">@lang('admin.include.heat_map')</span>
+
+/Users/gilcassar/cooper-web/routes/admin.php:
+    9  Route::get('/', 'AdminController@dashboard')->name('index');
+   10  Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
+   11: Route::get('/heatmap', 'AdminController@heatmap')->name('heatmap');
+   12  Route::get('/translation',  'AdminController@translation')->name('translation');
+   13  
+
+11 matches across 5 files

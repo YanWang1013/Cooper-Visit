@@ -1,0 +1,67 @@
+.display-table {
+    display: table !important;
+}
+.display-table-cell {
+    display: table-cell !important;
+}
+.vertical-align-top {
+    vertical-align: top;
+}
+.tab-style4 .nav-tabs {
+    list-style: none;
+    border: 0;
+}
+.tab-style4 .nav-tabs li {
+    border: 1px solid #e5e5e5;
+    border-right: none;
+    border-radius: 0;
+    margin-bottom: 0;
+    display: block;
+    float: left;
+    width: 100%;
+    left: 1px;
+    position: relative;
+}
+.tab-style4 .nav-tabs li a {
+    background-color: #f7f7f7;
+    border: none;
+    color: #575757;
+    line-height: 44px;
+    margin: 0 !important;
+    padding: 0 25px;
+    border-radius: 0;
+    top: 1px;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bolder;
+    text-align: left;
+}
+.tab-style4 .nav-tabs li.active {
+    z-index: 1;
+}
+.tab-style4 .nav-tabs li.active a {
+    border-color: transparent;
+    border: none;
+    border-radius: 0;
+    background: #fff;
+}
+.tab-style4 .tab-content {
+    padding: 0 0 0 55px;
+    border-left: 1px solid #e5e5e5;
+}
+@media screen and (max-width: 768px){
+    .tab-style4 .tab-content {
+        border-left: none;
+    }
+}
+.tab-style4 .tab-content > .tab-pane {
+    display: none;
+}
+.tab-style4 .tab-content > .tab-pane.active {
+    display: block;
+}
+.tab-style4 .tab-content > .tab-pane h4 {
+    font-size: 18px;
+}
